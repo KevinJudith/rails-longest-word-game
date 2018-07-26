@@ -15,10 +15,10 @@ class GamesController < ApplicationController
       if english_word?(params[:word])
         @sentence = "Congratulations!"
       else
-        @sentence = "Not an english_word"
+        @sentence = "Sorry! #{@score} is not an english_word"
       end
     else
-        @sentence = "Not in the grid"
+        @sentence = "Sorry the word #{@score} is not in the grid"
     end
   end
 
